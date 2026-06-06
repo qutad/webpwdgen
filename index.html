@@ -9,28 +9,33 @@
 
 <body>
     <main class="terminal">
-            <section class="options">
-                <label> ] LENGTH? <input type="text" id="length"></label>
-                <label> ] UPPERCASE LETTERS <input type="checkbox" id="uppercase" checked>
-               <span></span> </label>
-                <label> ] LOWERCASE LETTERS <input type="checkbox" id="lowercase" checked>
-               <span></span> </label>
-                <label> ] NUMBERS <input type="checkbox" id="numbers" checked>
-               <span></span> </label>
-                <label> ] SYMBOLS <input type="checkbox" id="symbols" checked>
-               <span></span> </label>
-            </section>
-            
-            <button id="generate-btn">Generate</button>
-    
-            <div id="strength-btn">
-                strength: <span id="strength">None</span>
+
+            <div class="generator-panel">
+                <section class="options">
+                    <label> ] LENGTH? <input type="text" id="length"></label>
+                    <label> ] UPPERCASE LETTERS <input type="checkbox" id="uppercase" checked>
+                <span></span> </label>
+                    <label> ] LOWERCASE LETTERS <input type="checkbox" id="lowercase" checked>
+                <span></span> </label>
+                    <label> ] NUMBERS <input type="checkbox" id="numbers" checked>
+                <span></span> </label>
+                    <label> ] SYMBOLS <input type="checkbox" id="symbols" checked>
+                <span></span> </label>
+                </section>
+                
+                <button id="generate-btn">Generate</button>
             </div>
             
             <section class="output-box">
-                <p> OUTPUT:</p>
-                <input type="text" id="password" readonly>
-                <button id="copy-btn">copy</button>
+                <div class="output-header">
+                    <p> OUTPUT:</p>
+                    <div id="strength-btn">
+                        strength: <span id="strength">None</span>
+                    </div>
+                </div>
+                    <input type="text" id="password" readonly>
+                    <button id="copy-btn">copy</button>
+                    
             </section>
     </main>
     

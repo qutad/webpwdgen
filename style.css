@@ -14,13 +14,34 @@ body {
 }
 
 .terminal {
-    width: 575px;
-    min-height: 510px;
+    height: 100vh;
     padding: 10px 7px;
+    font-size: 15px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.generator-panel {
+    position: absolute;
+    width: 300px;
+    margin: 0 auto;    
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
 }
 
 .options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    
     margin-bottom: 24px;
+}
+
+.options label{
+    width: 300px;
 }
 
 label {
@@ -50,12 +71,15 @@ input[type="checkbox"] {
 
 input[type="checkbox"] + span::before {
     content: "NO";
+    cursor: pointer;
+    
 }
 
 input[type="checkbox"]:checked + span::before {
     content: "YES";
     color: #000;
     background: #fff;
+    cursor: pointer;
 }
 
 button {
@@ -73,14 +97,39 @@ button:hover {
     color: #000;
 }
 
+#generate-btn {
+    width: 100px;
+}
+
+#copy-btn {
+    width: 60px;
+    display: block;
+}
+
 .output-box {
-    width: 560px;
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
     min-height: 84px;
     border: 1px solid #fff;
     padding: 18px 16px;
+    margin-top: auto;
 }
+
+.output-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
 
 #password {
     width: 100%;
+    display: block;
+    
+    margin-top: auto;
+    margin-bottom: 3px;
 }
 
