@@ -46,7 +46,7 @@ body {
 
 label {
     display: block;
-    color: #fff;
+    color: var(--text);
     text-transform: uppercase;
 }
 
@@ -59,7 +59,7 @@ label {
 
 input {
     background: transparent;
-    color: #fff;
+    color: var(--text);
     border: none;
     font: inherit;
     outline: none;
@@ -77,15 +77,15 @@ input[type="checkbox"] + span::before {
 
 input[type="checkbox"]:checked + span::before {
     content: "YES";
-    color: #000;
-    background: #fff;
+    color: var(--bg);
+    background: var(--text);
     cursor: pointer;
 }
 
 button {
-    background: #000;
-    color: #fff;
-    border: 1px solid #fff;
+    background: var(--bg);
+    color: var(--text);
+    border: 1px solid var(--border);
     padding: 4px 16px;
     font-family: inherit;
     font-weight: bold;
@@ -93,8 +93,8 @@ button {
 }
 
 button:hover {
-    background: #fff;
-    color: #000;
+    background: var(--text);
+    color: var(--bg);
 }
 
 #generate-btn {
@@ -112,7 +112,7 @@ button:hover {
 
     width: 100%;
     min-height: 84px;
-    border: 1px solid #fff;
+    border: 1px solid var(--border);
     padding: 18px 16px;
     margin-top: auto;
 }
@@ -131,5 +131,23 @@ button:hover {
     
     margin-top: auto;
     margin-bottom: 3px;
+}
+
+
+:root {
+    --bg: #000;
+    --text: #fff;
+    --border: #fff;
+}
+
+body.light-mode {
+    --bg: #fff;
+    --text: #000;
+    --border: #000;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
 }
 

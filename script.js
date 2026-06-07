@@ -13,6 +13,8 @@ const lowercaseChars = 'abcdefghijklmnopqrstuvwxyz';
 const numberChars = '0123456789';
 const symbolChars = '!@#$%^&*()_+-=[]{}|;:,.<>?';
 
+const themeToggle = document.getElementById('theme-toggle');
+
 function generatePassword() {
   let length = Number(lengthInput.value);
   let chars = "";
@@ -73,3 +75,16 @@ copyBtn.addEventListener('click', function() {
 
 generateBtn.addEventListener("click", generatePassword)
 
+
+if (localStorage.getItem('theme') === 'light') {
+  document.body.classList.add('light-mode');
+  themeToggle.textContent = 'Dark Mode';
+}
+
+themeToggle.addEventListener('click', function() {
+  document.body.classList.toggle("light-mode");
+
+  const isLight = document.body.classList.contains("light-mode");
+  themeToggle.textContent = isLight ? "Dark mode" : "Light mode";
+  localStorage.setItem("theme", isLight ? "light" : "dark");
+});
