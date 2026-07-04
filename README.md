@@ -19,7 +19,7 @@ A simple terminal-inspired password generator built with HTML, CSS, and JavaScri
 
 - HTML
 - CSS
-- JavaScript
+- TypeScript
 
 ## Installation
 
@@ -35,7 +35,18 @@ git clone https://github.com/yourusername/password-generator.git
 cd password-generator
 ```
 
-3. Open `index.html` in your browser.
+3. Install the project dependencies:
+
+```bash
+npm install
+```
+4. Compile the TypeScript file:
+
+```bash
+npx tsc
+```
+
+5. Open `index.html` in your browser.
 
 ## Usage
 
@@ -52,11 +63,14 @@ cd password-generator
 
 ```text
 password-generator/
-│
 ├── index.html
 ├── style.css
-├── script.js
-└── README.md
+├── script.ts
+├── tsconfig.json
+├── package.json
+├── package-lock.json
+└── dist/
+    └── script.js
 ```
 
 ## License:
