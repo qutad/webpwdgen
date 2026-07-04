@@ -59,3 +59,5 @@ password-generator/
 └── README.md
 ```
 
+## License:
+GPL 3.0-License
